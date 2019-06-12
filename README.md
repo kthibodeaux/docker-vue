@@ -1,10 +1,10 @@
 Build the image:
 
-`docker build -t docker-vue .`
+`docker build -t vuecli .`
 
 Create a new app:
 
-`docker run -it --rm -v "$PWD":"/app" -u "$(id -u)" docker-vue vue create MYAPP`
+`docker run -it --rm -v "$PWD":"/app" -u "$(id -u)" vuecli vue create MYAPP`
 
 Use with `docker-compose`:
 
@@ -12,7 +12,7 @@ Use with `docker-compose`:
 version: '3'
 services:
   web:
-    image: docker-vue
+    image: vuecli
     tty: true
     stdin_open: true
     command: yarn serve
